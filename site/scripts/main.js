@@ -51,8 +51,51 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	// image gallery
+	Site.gallery = new Caracal.Gallery.Slider(4, false);
+	Site.gallery
+		.images.set_container(document.querySelector('section#gallery div'))
+		.images.set_center(false)
+		.images.set_spacing(10)
+		.controls.attach_next(document.querySelector('section#gallery a.next'))
+		.controls.attach_previous(document.querySelector('section#gallery a.previous'))
+		.images.update();
+
+	// dynamic image loader
+	Site.image_loader = new Caracal.Gallery.Loader();
+	Site.image_loader
+		.add_gallery(Site.gallery)
+		.set_thumbnail_size(300)
+		.load_by_group_text_id('first');
+
+	// handle clicks on gallery menu items
+	Site.active_gallery = null;
+	var items = document.querySelectorAll('section#gallery nav a');
+	for (var i=0, count=items.length; i < count; i++) {
+		var menu_item = items[i];
+		menu_item.addEventListener('click', Site.handle_gallery_click);
+
+		if (menu_item.dataset.textId == 'first') {
+			menu_item.classList.add('active');
+			Site.active_gallery = menu_item;
+		}
+	}
 };
 
+/**
+ * Handle clicking on gallery menu item.
+ */
+Site.handle_gallery_click = function(event) {
+	// start loading images
+	var gallery_id = event.target.dataset.id;
+	Site.image_loader.load_by_group_id(gallery_id);
+
+	// update gallery menu
+	Site.active_gallery.classList.remove('active');
+	Site.active_gallery = event.target;
+	Site.active_gallery.classList.add('active');
+}
 
 // connect document `load` event with handler function
 $(Site.on_load);
