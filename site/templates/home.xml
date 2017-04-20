@@ -24,12 +24,54 @@
 
 				<!-- Animated keyHole -->
 				<div class="key_hole">
-					<cms:svg file="logo.svg"/>
+
+					<!-- Logo -->
+					<a href="#top" class="logo">
+						<cms:svg file="logo.svg"/>
+					</a>
+
+					<!-- Main title -->
 					<h1><cms:text constant="the_perfect_location"/></h1>
-					<a href="SomePlace">
+
+					<!-- Book link to outer url -->
+					<a href="SomePlace" class="book">
 						<cms:text constant="book"/>
 					</a>
 				</div>
+			</section>
+
+			<!-- About us -->
+			<section id="about">
+				<!-- About us article -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_us"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h2"/>
+					<param name="title" value=""/>
+				</cms:module>
+
+				<!-- Download link -->
+				<cms:module
+					name="downloads"
+					action="show"
+					template="parts/download.xml"
+					/>
+			</section>
+
+			<!-- Section big map image -->
+			<section id="location">
+				<img
+					src="_BASEURL.'/site/images/map.jpg'"
+					alt="map"
+					cms:eval="src"
+					/>
+			</section>
+
+			<!-- Section gallery -->
+			<section id="gallery">
 
 			</section>
 		</body>
