@@ -5,3 +5,150 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors: Iliya Melishev
  */
+
+//Gold style baby
+.gold_style(){
+	color: @color_gold;
+	text-decoration: none;
+	border: 2px solid @color_gold;
+	border-radius: 6px;
+	padding: 0.5em;
+	font-weight: 700;
+	transition: all 0.3s;
+
+	&:hover {
+		color: white;
+		border-color: white;
+		background-color: @color_gold;
+
+		svg {
+			fill: white;
+		}
+	}
+}
+
+//Pulse animation
+
+@keyframes pulse {
+	from { transform: scale(1); }
+	to { transform: scale(1.15); }
+}
+
+/**
+ * Section top with animated keyhole
+ */
+@circle_size: 500px;
+
+section#top {
+	position: relative;
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	background-image: url(../images/header_background.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+	text-align: center;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: @circle_size;
+		height: @circle_size;
+		top: 0;
+		left: calc(~'50% - ' @circle_size / 2);
+
+		border-radius: 50%;
+		background-color: fade(white, 30%);
+		transform-origin: 50% 50%;
+		transform: scale(1);
+
+		animation-name: pulse;
+		animation-direction: alternate-reverse;
+		animation-iteration-count: infinite;
+		animation-duration: 1s;
+		animation-fill-mode: backwards;
+	}
+
+	&:after {
+		animation-delay: 0.2s;
+		z-index: 0;
+	}
+}
+
+section#top div.key_hole {
+	position: relative;
+	width: @circle_size;
+	height: @circle_size;
+
+	margin: 0 auto;
+
+	border-radius: 50%;
+	background-image: url(../images/header_img.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
+
+	a.logo {
+		padding-top: 1em;
+		margin: 0 auto;
+		display: block;
+
+		svg {
+			width: 100px;
+		}
+	}
+
+	a.book {
+		.gold_style();
+		display: block;
+		width: 100px;
+		margin: 0 auto;
+	}
+
+	h1 {
+		color: @color_gold;
+		margin: 0.5em;
+		text-transform: uppercase;
+	}
+}
+
+
+/**
+ * Section about us
+*/
+
+section#about {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	text-align: center;
+
+	h2 {
+		font-weight: 400;
+		color: @color_grey_dark;
+	}
+
+	p {
+		color: @color_grey_dark;
+	}
+
+	a {
+		.gold_style();
+		display: inline-block;
+		margin: 1em 0;
+	}
+}
+
+/**
+ * Section gallery
+*/
+
+section#location {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	min-height: 1250px;
+
+	img {
+		margin: 0 auto;
+		display: block;
+	}
+}
