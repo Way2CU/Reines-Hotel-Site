@@ -8,7 +8,30 @@
 		</head>
 
 		<body>
-			<h1>THE PERFECT LOCATION</h1>
+			<!-- Generic desktop header -->
+			<cms:template file="stock/header_generic.xml">
+				<param name="fixed" value=""/>
+				<param name="menu" value="parts/menu_items.xml"/>
+				<param name="logo" value="logo.svg"/>
+				<param name="phone" value="phone"/>
+				<param name="phone_sprite_icon" value="icon-phone"/>
+				<param name="sprite" value="site_sprite.svg"/>
+				<param name="mobile_menu_sprite_icon" value="icon-menu"/>
+			</cms:template>
+
+			<!-- Section animated background -->
+			<section id="top">
+
+				<!-- Animated keyHole -->
+				<div class="key_hole">
+					<cms:svg file="logo.svg"/>
+					<h1><cms:text constant="the_perfect_location"/></h1>
+					<a href="SomePlace">
+						<cms:text constant="book"/>
+					</a>
+				</div>
+
+			</section>
 		</body>
 	</html>
 </document>
