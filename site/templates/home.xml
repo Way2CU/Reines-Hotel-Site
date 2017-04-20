@@ -72,6 +72,20 @@
 
 			<!-- Section gallery -->
 			<section id="gallery">
+				<!-- Menu -->
+				<nav>
+					<cms:module
+						name="gallery"
+						action="show_group_list"
+						template="parts/gallery_menu_item.xml"
+						/>
+				</nav>
+
+				<!-- Image container -->
+				<div/>
+
+				<a class="previous">Prev</a>
+				<a class="next">Prev</a>
 
 			</section>
 		</body>
