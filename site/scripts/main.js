@@ -56,7 +56,7 @@ Site.on_load = function() {
 	Site.gallery = new Caracal.Gallery.Slider(4, false);
 	Site.gallery
 		.images.set_container(document.querySelector('section#gallery div'))
-		.images.set_center(false)
+		.images.set_center(true)
 		.images.set_spacing(10)
 		.controls.attach_next(document.querySelector('section#gallery a.next'))
 		.controls.attach_previous(document.querySelector('section#gallery a.previous'))
