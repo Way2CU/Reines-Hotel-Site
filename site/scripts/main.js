@@ -81,6 +81,7 @@ Site.on_load = function() {
 			Site.active_gallery = menu_item;
 		}
 	}
+	Site.map(32.079048, 34.774704);
 };
 
 /**
@@ -96,6 +97,26 @@ Site.handle_gallery_click = function(event) {
 	Site.active_gallery = event.target;
 	Site.active_gallery.classList.add('active');
 }
+
+/**
+ * Create google map
+ */
+Site.map = function (langitude, latitude) {
+  var mapCanvas = document.getElementById('map');
+  var mapOptions = {
+    center: {lat: langitude, lng: latitude},
+    zoom: 17,
+    scrollwheel: false
+  }
+
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+  new google.maps.Marker({
+    position:{lat: langitude, lng: latitude},
+    map: map,
+    title: "Reines Hotel"
+  });
+};
 
 // connect document `load` event with handler function
 $(Site.on_load);
