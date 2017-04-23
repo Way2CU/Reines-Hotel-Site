@@ -6,5 +6,13 @@
     "gallery": "Gallery",
     "features": "Features",
     "book": "BOOK NOW",
-    "the_perfect_location": "the perfect location"
+    "the_perfect_location": "the perfect location",
+    "previous_image": "Previous image",
+    "next_image": "Next image",
+    "adress": "5 Reines, Tel-Aviv Israel",
+    "question": "Have a question,",
+    "get_back_to_you": "Want one of our representatives to get back to you ?",
+    "send": "Send Form",
+    "copyright_holder": "Copyright &copy; 2017. by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>.",
+    "copyright_text": "All rights reserved."
 }
