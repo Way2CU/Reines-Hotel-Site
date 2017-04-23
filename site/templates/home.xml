@@ -96,7 +96,7 @@
 			</section>
 
 			<!-- Section features -->
-			<section class="features">
+			<section id="features">
 				<cms:module
 					name="articles"
 					action="show_list"

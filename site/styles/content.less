@@ -27,8 +27,13 @@
 	}
 }
 
-//Pulse animation
+// Section padding
+.section_padding() {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
 
+// Pulse animation
 @keyframes pulse {
 	from { transform: scale(1); }
 	to { transform: scale(1.15); }
@@ -105,6 +110,7 @@ section#top div.key_hole {
 		display: block;
 		width: 100px;
 		margin: 0 auto;
+		background-color: fade(white, 50%);
 	}
 
 	h1 {
@@ -122,6 +128,7 @@ section#top div.key_hole {
 section#about {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	text-align: center;
+	.section_padding();
 
 	h2 {
 		font-weight: 400;
@@ -146,6 +153,7 @@ section#about {
 section#location {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	min-height: 1250px;
+	.section_padding();
 
 	img {
 		margin: 0 auto;
@@ -161,6 +169,7 @@ section#gallery {
 	padding: 2em calc(~'(100% - 1200px)' / 2);
 	background-color: @color_grey_light;
 	text-align: center;
+	.section_padding();
 }
 
 section#gallery div {
@@ -220,17 +229,17 @@ section#gallery nav {
 		padding: 0 1em;
 		transition: all 0.3s;
 
-	&:after {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 5px;
-		background-color: @color_grey;
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 5px;
+			background-color: @color_grey;
 		}
 
-	&.active:after {
-		background-color: @color_gold;
-	}
+		&.active:after {
+			background-color: @color_gold;
+		}
 	}
 }
 
@@ -254,12 +263,13 @@ section#gallery > a.previous, {
 * section features
 */
 
-section.features {
+section#features {
 	padding: 2em calc(~'(100% - 1200px)' / 2);
 	text-align: center;
+	.section_padding();
 }
 
-section.features li {
+section#features li {
 	display: inline-block;
 	vertical-align: top;
 	list-style: none;
@@ -267,7 +277,7 @@ section.features li {
 	width: 350px;
 }
 
-section.features li svg {
+section#features li svg {
 	width: 80px;
 	height: 80px;
 }
