@@ -158,13 +158,14 @@ section#location {
 */
 
 section#gallery {
-	padding: 0 calc(~'(100% - 1200px)' / 2);
+	padding: 2em calc(~'(100% - 1200px)' / 2);
 	background-color: @color_grey_light;
+	text-align: center;
 }
 
 section#gallery div {
 	position: relative;
-	min-height: 500px;
+	min-height: 400px;
 	overflow: hidden;
 }
 
@@ -202,4 +203,71 @@ section#gallery div a {
 	img {
 		vertical-align: middle;
 	}
+}
+
+section#gallery nav {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 2em;
+
+	a {
+		text-decoration: none;
+		display: inline-block;
+		vertical-align: middle;
+		color: @color_grey_dark;
+		font-size: 1.3em;
+		padding: 0 1em;
+		transition: all 0.3s;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 5px;
+		background-color: @color_grey;
+		}
+
+	&.active:after {
+		background-color: @color_gold;
+	}
+	}
+}
+
+section#gallery > a.next,
+section#gallery > a.previous, {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 2.5em;
+	color: @color_grey_dark;
+	font-size: 1.3em;
+
+	svg {
+		width: 35px;
+		height: 35px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+/**
+* section features
+*/
+
+section.features {
+	padding: 2em calc(~'(100% - 1200px)' / 2);
+	text-align: center;
+}
+
+section.features li {
+	display: inline-block;
+	vertical-align: top;
+	list-style: none;
+	padding: 1em;
+	width: 350px;
+}
+
+section.features li svg {
+	width: 80px;
+	height: 80px;
 }

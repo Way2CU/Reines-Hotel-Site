@@ -1,0 +1,133 @@
+/**
+ * Content Style Sheet
+ * Reines Hotel
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+footer {
+	padding: 2em calc(~'(100% - 1200px)' / 2);
+	background: @color_grey_dark;
+	color: white;
+	text-align: center;
+}
+
+footer div.information {
+	display: inline-block;
+	vertical-align: top;
+	width: 600px;
+
+	box-sizing: border-box;
+	padding: 0 2em;
+}
+
+footer div.information a {
+	.gold_style();
+	padding: 0.5em;
+	margin: 0 2em;
+	display: inline-block;
+	vertical-align: middle;
+
+	svg {
+		fill: @color_gold;
+		display: inline-block;
+		vertical-align: middle;
+		width: 1.5em;
+		height: 1.5em;
+		margin: 0.5em;
+	}
+}
+
+footer div.information h2 {
+	margin: 0;
+	padding-top: 0.5em;
+}
+
+footer div.information h4 {
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+footer div.information div.form_container {
+	box-sizing: border-box;
+	padding: 0 30px;
+}
+
+footer div.information div.form_container label {
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+footer div.information div.form_container label span {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	border: 1px solid @color_gold;
+	border-radius: 5px 0px 0px 5px;
+	border-right: none;
+	padding: 1em;
+	line-height: 1;
+	font-size: 1rem;
+	text-align: left;
+	width: 35%;
+	min-height: 52px;
+}
+
+footer div.information div.form_container label input {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid @color_gold;
+	border-radius: 0px 5px 5px 0px;
+	border-left-color: fade(@color_gold, 30%);
+	padding: 1em;
+	line-height: 1;
+	font-size: 1rem;
+	box-sizing: border-box;
+	width: 65%;
+	background-color: transparent;
+	min-height: 52px;
+	color: white;
+	transition: all 0.3s;
+
+	&:hover,
+	&:focus {
+		background-color: fade(@color_gold, 10%);
+	}
+}
+
+footer div.information div.form_container div.controls {
+	display: block;
+	width: 100%;
+}
+
+footer div.information div.form_container div.controls button {
+	.gold_style();
+	display: inline-block;
+	width: 400px;
+	padding: 1.5em 1em;
+	background-color: fade(@color_gold, 10%);
+}
+
+footer div#map {
+	display: inline-block;
+	vertical-align: top;
+	width: 596px;
+	height: 600px;
+
+	border-radius: 5px;
+	border: 1px solid @color_gold;
+}
+
+/*
+ * Copyright
+*/
+
+div.copyright {
+	background-color: black;
+	color: white;
+	text-align: center;
+	background-position: calc(~'50% - 100px') center;
+}
