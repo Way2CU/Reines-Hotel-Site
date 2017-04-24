@@ -1,0 +1,55 @@
+<document>
+	<header class="mobile_title">
+
+		<a href="" class="menu">
+			<cms:svg file="menu.svg"/>
+		</a>
+
+		<!-- Phone -->
+		<a
+			href="'tel:'.urlencode(Language::get_Text('phone'))"
+			cms:eval="href"
+			class="phone"
+			>
+			<cms:svg file="site_sprite.svg" symbol="icon-phone"/>
+		</a>
+
+		<!-- Book now link -->
+		<a href="some_place" class="book">
+			<cms:text constant="book" />
+		</a>
+
+		<!-- Logo link -->
+		<a href="#" class="logo">
+			<cms:svg file="logo.svg"/>
+		</a>
+
+		<!-- Mobile menu -->
+		<div class="mobile_menu">
+			<!-- About us -->
+			<a href="#about">
+				<cms:text constant="about_us" />
+			</a>
+
+			<!-- location -->
+			<a href="#location">
+				<cms:text constant="location" />
+			</a>
+
+			<!-- gallery -->
+			<a href="#gallery">
+				<cms:text constant="gallery" />
+			</a>
+
+			<!-- features -->
+			<a href="#features">
+				<cms:text constant="features" />
+			</a>
+
+			<!-- book -->
+			<a href="some_place" id="book">
+				<cms:text constant="book" />
+			</a>
+		</div>
+	</header>
+</document>
