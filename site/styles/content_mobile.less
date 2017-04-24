@@ -1,0 +1,228 @@
+/**
+ * Content_Mobile Style Sheet
+ * Reines Hotel
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+
+//Gold style baby
+.gold_style(){
+	color: @color_gold;
+	text-decoration: none;
+	border: 2px solid @color_gold;
+	border-radius: 6px;
+	padding: 0.5em;
+	font-weight: 700;
+	transition: all 0.3s;
+
+	&:hover {
+		color: white;
+		border-color: white;
+		background-color: @color_gold;
+
+		svg {
+			fill: white;
+		}
+	}
+}
+
+section#top {
+	padding: 0 1em;
+	margin-top: 75px;
+	background-image: url(../images/mobile_header.jpg);
+	background-position: center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	min-height: 250px;
+	text-align: center;
+
+	h1 {
+		margin: 0;
+		color: @color_gold;
+		padding-top: 5%;
+		text-transform: uppercase;
+		font-size: 1.7em;
+	}
+
+	a.book {
+		.gold_style();
+		display: inline-block;
+		margin-bottom: 1.5em;
+	}
+
+	a.logo {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+
+		svg {
+			width: 25vw;
+			height: 25vw;
+		}
+	}
+}
+
+
+/**
+ * Section about us
+*/
+
+section#about {
+	padding: 1em 2em;
+	text-align: center;
+
+	h2 {
+		font-weight: 400;
+		color: @color_grey_dark;
+	}
+
+	p {
+		color: @color_grey_dark;
+	}
+
+	a {
+		.gold_style();
+		display: inline-block;
+		margin: 1em 0;
+	}
+}
+
+
+/**
+ * Section location
+*/
+
+section#location {
+	padding: 1em;
+
+	img {
+		margin: 0 auto;
+		display: block;
+		width: 90vw;
+	}
+}
+
+
+/**
+ * Section gallery
+*/
+
+section#gallery {
+	padding: 1em;
+	background-color: @color_grey_light;
+	text-align: center;
+}
+
+section#gallery div {
+	position: relative;
+	min-height: 200px;
+	overflow: hidden;
+}
+
+section#gallery div a {
+	position: absolute;
+	top: 0;
+	width: 50vw;
+	height: 50vw;
+	overflow: hidden;
+
+	background-color: fade(black, 5);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s;
+	text-align: center;
+	white-space: nowrap;
+
+	&.visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	&.transit {
+		transition: none;
+	}
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		width: 0;
+		vertical-align: middle;
+	}
+
+	img {
+		vertical-align: middle;
+		width: 50vw;
+	}
+}
+
+section#gallery nav {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 2em;
+
+	a {
+		text-decoration: none;
+		display: inline-block;
+		vertical-align: middle;
+		color: @color_grey_dark;
+		font-size: 1.3em;
+		padding: 0 1em;
+		width: 50%;
+		box-sizing: border-box;
+		margin-bottom: 1em;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 5px;
+			background-color: @color_grey;
+		}
+
+		&.active:after {
+			background-color: @color_gold;
+		}
+	}
+}
+
+section#gallery > a.next,
+section#gallery > a.previous, {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 0.5em;
+	color: @color_grey_dark;
+	font-size: 1em;
+
+	svg {
+		width: 35px;
+		height: 35px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+/**
+* section features
+*/
+
+section#features {
+	padding: 1em;
+	text-align: center;
+}
+
+section#features li {
+	display: inline-block;
+	vertical-align: top;
+	list-style: none;
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+section#features li svg {
+	width: 80px;
+	height: 80px;
+}

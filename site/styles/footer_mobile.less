@@ -1,0 +1,123 @@
+/**
+ * Footer_Mobile Style Sheet
+ * Reines Hotel
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+footer {
+	padding: 1em;
+	background: @color_grey_dark;
+	color: white;
+	text-align: center;
+}
+
+footer div.information {
+	padding-bottom: 2em;
+}
+
+footer div.information a {
+	.gold_style();
+	border-width: 1px;
+	padding: 0.5em;
+	margin: 1em;
+	display: inline-block;
+	vertical-align: middle;
+
+	svg {
+		fill: @color_gold;
+		display: inline-block;
+		vertical-align: middle;
+		width: 1.5em;
+		height: 1.5em;
+		margin: 0.5em;
+	}
+}
+
+footer div.information h2 {
+	margin: 0;
+	padding-top: 0.5em;
+}
+
+footer div.information h4 {
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+footer div.information div.form_container label {
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+footer div.information div.form_container label span {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	border: 1px solid @color_gold;
+	border-radius: 5px 0px 0px 5px;
+	border-right: none;
+	padding: 1em;
+	line-height: 1;
+	font-size: 1rem;
+	text-align: left;
+	width: 60%;
+	min-height: 52px;
+}
+
+footer div.information div.form_container label input {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid @color_gold;
+	border-radius: 0px 5px 5px 0px;
+	border-left-color: fade(@color_gold, 30%);
+	padding: 1em;
+	line-height: 1;
+	font-size: 1rem;
+	box-sizing: border-box;
+	width: 40%;
+	background-color: transparent;
+	min-height: 52px;
+	color: white;
+	transition: all 0.3s;
+
+	&:focus {
+		background-color: fade(@color_gold, 10%);
+	}
+}
+
+footer div.information div.form_container div.controls {
+	display: block;
+	width: 100%;
+}
+
+footer div.information div.form_container div.controls button {
+	.gold_style();
+	display: inline-block;
+	width: 200px;
+	padding: 1em;
+	background-color: fade(@color_gold, 10%);
+}
+
+footer div#map {
+	display: inline-block;
+	vertical-align: top;
+	width: 90vw;
+	height: 600px;
+
+	border-radius: 5px;
+	border: 1px solid @color_gold;
+}
+
+/*
+ * Copyright
+*/
+
+div.copyright {
+	background-color: black;
+	color: white;
+	text-align: center;
+	background-position: calc(~'50% - 100px') center;
+}
