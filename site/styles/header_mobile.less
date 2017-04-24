@@ -9,12 +9,12 @@
 header.mobile_title {
 	background-color: white;
 	text-align: center;
+	padding: 1em 0;
 }
 
 header.mobile_title a {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0.5em;
 }
 
 header.mobile_title a svg {
@@ -22,8 +22,22 @@ header.mobile_title a svg {
 	height: 35px;
 }
 
+header.mobile_title a.phone {
+	position: absolute;
+	left: 2.5em;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 1em;
+	padding-right: 0;
+}
+
 header.mobile_title a.logo {
-	float: right;
+	position: absolute;
+	right: 0.5em;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 1em;
+	padding-right: 0;
 }
 
 header.mobile_title a.logo svg {
@@ -38,6 +52,10 @@ header.mobile_title a.phone svg {
 header.mobile_title a.menu {
 	display: inline-block;
 	vertical-align: middle;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0.5em;
 }
 
 header.mobile_title a.book {
@@ -50,4 +68,5 @@ header.mobile_title a.book {
 	border-radius: 6px;
 	padding: 0.5em;
 	font-weight: 700;
+	margin: 0 1em;
 }
