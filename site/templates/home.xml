@@ -9,6 +9,7 @@
 		</head>
 
 		<body>
+			<cms:svg file="site_sprite.svg"/>
 			<!-- Generic desktop header -->
 			<cms:desktop>
 				<cms:template file="stock/header_generic.xml">
