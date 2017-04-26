@@ -82,7 +82,27 @@ Site.on_load = function() {
 		}
 	}
 	Site.map(32.079048, 34.774704);
+
+	//Dialog iframe
+	Site.dialog_iframe = new Caracal.Dialog();
+	Site.dialog_iframe.set_content('<iframe style="width:100%;height:100%;border:0" src="https://secure.ezgo.co.il/Main/OnLineSearchFrame.aspx?iItemId=8901&Lng=he&Cur=0"></iframe>');
+	Site.dialog_iframe.set_size('800px', '800px');
+	if(Site.is_mobile)
+		Site.dialog_iframe.set_size('300px', '500px');
+
+	//Connect click handler to all button book now to dialog iframe
+	Site.links = document.querySelectorAll('a.book');
+	for (var i=0, count=Site.links.length; i < count; i++)
+		Site.links[i].addEventListener('click', Site.handle_iframe_dialog);
 };
+
+/**
+ * Show dialog iframe function
+ */
+Site.handle_iframe_dialog = function(event) {
+	event.preventDefault();
+	Site.dialog_iframe.open();
+}
 
 /**
  * Handle clicking on gallery menu item.

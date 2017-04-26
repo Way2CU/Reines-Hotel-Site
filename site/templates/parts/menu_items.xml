@@ -20,7 +20,7 @@
 	</a>
 
 	<!-- book -->
-	<a href="some_place" id="book">
+	<a href="some_place" class="book">
 		<cms:text constant="book" />
 	</a>
 </document>
