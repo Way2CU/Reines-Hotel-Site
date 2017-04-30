@@ -13,7 +13,7 @@ All of these need to be checked manually, changed and then committed. System wil
 	-> [x] PNG images are optimized using `optipng` command;
 	- [x] JPEG images are converted from original PNG and optimized using `guetzli` command;
 	- [x] SVG images are cleaned and optimized;
-	- [ ] Site has favicon specified in different sizes (16, 32, 64);
+	- [x] Site has favicon specified in different sizes (16, 32, 64);
 	- [x] All active elements of the site have `:hover` and `:focus` styles defined;
 	- [x] Site has copyright;
 	- [x] `README.md` file updated appropriately with licensing information;
