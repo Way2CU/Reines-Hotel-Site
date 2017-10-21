@@ -81,6 +81,25 @@ footer div.information div.form_container label input {
 	}
 }
 
+footer div.information div.form_container label textarea {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid @color_gold;
+	border-radius: 5px;
+	padding: 1em;
+	line-height: 1;
+	font-size: 1rem;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: transparent;
+	color: white;
+	transition: all 0.3s;
+
+	&:focus {
+		background-color: fade(@color_gold, 10%);
+	}
+}
+
 footer div.information div.form_container div.controls {
 	display: block;
 	width: 100%;

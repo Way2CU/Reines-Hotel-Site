@@ -60,15 +60,15 @@ footer div.information div.form_container label {
 	box-sizing: border-box;
 	margin-bottom: 1em;
 	width: 100%;
+	border: 1px solid @color_gold;
+	border-radius: 5px;
 }
 
 footer div.information div.form_container label span {
 	display: inline-block;
 	vertical-align: middle;
 	box-sizing: border-box;
-	border: 1px solid @color_gold;
-	border-radius: 5px 0px 0px 5px;
-	border-right: none;
+	border-right: 1px solid @color_gold;
 	padding: 1em;
 	line-height: 1;
 	font-size: 1rem;
@@ -77,12 +77,14 @@ footer div.information div.form_container label span {
 	min-height: 52px;
 }
 
+footer div.information div.form_container label:nth-of-type(5) span {
+	padding: 1.5em;
+}
+
 footer div.information div.form_container label input {
+	border: transparent;
 	display: inline-block;
 	vertical-align: middle;
-	border: 1px solid @color_gold;
-	border-radius: 0px 5px 5px 0px;
-	border-left-color: fade(@color_gold, 30%);
 	padding: 1em;
 	line-height: 1;
 	font-size: 1rem;
@@ -90,6 +92,26 @@ footer div.information div.form_container label input {
 	width: 65%;
 	background-color: transparent;
 	min-height: 52px;
+	color: white;
+	transition: all 0.3s;
+
+	&:hover,
+	&:focus {
+		background-color: fade(@color_gold, 10%);
+	}
+}
+
+footer div.information div.form_container label textarea {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.2em;
+	padding-top: 0.3em;
+	box-sizing: border-box;
+	width: 65%;
+	line-height: 1;
+
+	border: transparent;
+	background-color: transparent;
 	color: white;
 	transition: all 0.3s;
 
