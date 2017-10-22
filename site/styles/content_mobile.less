@@ -231,10 +231,40 @@ section#features li svg {
  * Dialog iframe
 */
 div.dialog {
-	top: 50px;
+	top: 80px;
+	border-radius: 7px;
 }
 
 div.dialog.visible.active {
 	max-width: 300px;
 	padding: 0.5em;
+}
+
+div.dialog.visible.active div.title {
+	text-align: center;
+	color: white;
+	background-color: @color_gold;
+	border: 1px solid @color_gold;
+	border-radius: 5px;
+}
+
+div.dialog.visible.active div.content {
+	padding-left: 0.3rem;
+	padding-right: 0;
+}
+
+div.dialog.visible.active div.content div.inner_content {
+	max-height: 50vh;
+}
+
+div.dialog.visible.active div.command_bar a {
+	border: 1px solid @color_gold;
+	border-radius: 5px;
+	color:@color_gold;
+	background-color: white;
+
+	&:active {
+		background-color: @color_gold;
+		color: white;
+	}
 }

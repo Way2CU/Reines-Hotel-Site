@@ -81,12 +81,20 @@ Site.on_load = function() {
 			Site.active_gallery = menu_item;
 		}
 	}
+
 	Site.map(32.079048, 34.774704);
 
 	//Dialog iframe
 	Site.dialog_iframe = new Caracal.Dialog();
-	Site.dialog_iframe.set_content('<iframe style="width:100%;height:100%;border:0" src="https://secure.ezgo.co.il/Main/OnLineSearchFrame.aspx?iItemId=8901&Lng=en&Cur=1"></iframe>');
-	Site.dialog_iframe.set_size('900px', '800px');
+	Site.dialog_iframe
+		.set_content('<iframe style="width:100%;height:100%;border:0" src="https://secure.ezgo.co.il/Main/OnLineSearchFrame.aspx?iItemId=8901&Lng=en&Cur=1"></iframe>')
+		.set_size('900px', '800px');
+
+	// async set title for booking dialog
+	language_handler.getTextAsync(null, 'booking_dialog_title', function(constant,data) {
+		Site.dialog_iframe.set_title(data);
+	});
+
 	if(Site.is_mobile())
 		Site.dialog_iframe.set_size('300px', '400px');
 
