@@ -67,7 +67,10 @@ Site.on_load = function() {
 	Site.image_loader
 		.add_gallery(Site.gallery)
 		.set_thumbnail_size(300)
-		.load_by_group_text_id('first');
+		.load_by_group_text_id('first')
+		.add_callback(function() {
+			Site.lightbox = new LightBox('section#gallery a.image', true, false, true);
+		});
 
 	// handle clicks on gallery menu items
 	Site.active_gallery = null;
