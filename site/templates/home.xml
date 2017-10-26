@@ -4,7 +4,7 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
-			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCHNCO5O6L6RZ8WIHMC-EeMElGGJ_nJiKE"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHNCO5O6L6RZ8WIHMC-EeMElGGJ_nJiKE"></script>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
