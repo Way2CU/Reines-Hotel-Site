@@ -5,6 +5,7 @@
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHNCO5O6L6RZ8WIHMC-EeMElGGJ_nJiKE"></script>
+			<cms:collection include="animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
