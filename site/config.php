@@ -37,5 +37,6 @@ $cache_method = CacheType::NONE;
 $optimize_code = false;
 $include_styles = true;
 $url_rewrite = true;
+$force_https = true;
 
 ?>
