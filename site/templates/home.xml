@@ -84,6 +84,7 @@
 					name="downloads"
 					action="show"
 					template="parts/download.xml"
+					latest="1"
 					/>
 			</section>
 
