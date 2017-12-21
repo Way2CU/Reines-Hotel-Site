@@ -141,7 +141,10 @@
 				<!-- form and links -->
 				<div class="information">
 					<!-- Map link -->
-					<a href="https://www.google.com/maps/place/32%C2%B004'44.6%22N+34%C2%B046'28.9%22E/@32.079048,34.7725153,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.079048!4d34.774704" class="location">
+					<a
+						href="https://www.google.com/maps/place/32%C2%B004'44.6%22N+34%C2%B046'28.9%22E/@32.079048,34.7725153,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d32.079048!4d34.774704"
+						class="location"
+						target="_blank">
 						<cms:svg file="site_sprite.svg" symbol="icon-location" />
 						<cms:text constant="adress"/>
 					</a>
