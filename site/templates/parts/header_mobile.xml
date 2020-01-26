@@ -15,8 +15,13 @@
 		</a>
 
 		<!-- Book now link -->
-		<a href="some_place" class="book">
+		<a href="//bookingresults.com/reines5tlv/?lang=eng" class="book">
 			<cms:text constant="book" />
+		</a>
+
+		<!-- WhatsApp button -->
+		<a href="https://api.whatsapp.com/send?phone=972504555275" class="whatsapp">
+			<cms:svg file="site_sprite.svg" symbol="icon-whatsapp"/>
 		</a>
 
 		<!-- Logo link -->
@@ -47,7 +52,7 @@
 			</a>
 
 			<!-- book -->
-			<a href="some_place" id="book">
+			<a href="//bookingresults.com/reines5tlv/?lang=eng" id="book">
 				<cms:text constant="book" />
 			</a>
 		</div>

@@ -38,8 +38,6 @@ header.mobile_title a.logo {
 	right: 0.5em;
 	top: 50%;
 	transform: translateY(-50%);
-	padding: 1em;
-	padding-right: 0;
 }
 
 header.mobile_title a.logo svg {
@@ -49,6 +47,21 @@ header.mobile_title a.logo svg {
 
 header.mobile_title a.phone svg {
 	fill: @color_gold;
+}
+
+header.mobile_title a.whatsapp {
+	position: absolute;
+	right: 60px;
+
+	border: 0px solid #25D366;
+	border-radius: 50%;
+	background-color: #25D366;
+	line-height: 0;
+	filter: drop-shadow(0 0 5px @color_gold);
+
+	svg {
+		fill: white;
+	}
 }
 
 header.mobile_title a.menu {

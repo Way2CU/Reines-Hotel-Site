@@ -19,7 +19,7 @@ header nav {
 }
 
 header nav a {
-	margin: 0 1em;
+	margin: 0;
 }
 
 header a {
@@ -45,17 +45,23 @@ header a.logo img {
 	margin: 0 auto;
 }
 
-header a.phone svg {
+header a.book svg,
+header a.phone svg,
+header a.whatsapp svg {
 	display: inline-block;
 	vertical-align: middle;
-	width: 1em;
-	height: 1em;
-	fill: @color_gold;
-	padding-right: 0.5em;
+	width: 1.5rem;
+	height: 1.5rem;
+	fill: currentColor;
+	padding-right: 0.2rem;
 }
 
 header a.phone,
+header a.whatsapp,
 header a.book {
+	line-height: 1;
+	margin-right: 0.5rem;
+
 	color: @color_gold;
 	border: 2px solid @color_gold;
 	border-radius: 6px;
@@ -63,12 +69,12 @@ header a.book {
 	&:hover {
 		background-color: @color_gold;
 		color: white;
-		border-color: white;
-
-		svg {
-			fill: white;
-		}
 	}
+}
+
+header a.book,
+header a.whatsapp {
+	float: right;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {

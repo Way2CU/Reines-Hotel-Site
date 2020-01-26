@@ -1,9 +1,8 @@
 /**
  * Main JavaScript
- * Site Name
+ * Reines Hotel
  *
  * Copyright (c) 2015. by Way2CU, http://way2cu.com
- * Authors:
  */
 
 // create or use existing site scope
@@ -85,69 +84,36 @@ Site.on_load = function() {
 		}
 	}
 
-	Site.map(32.079048, 34.774704);
+	// create map
+	var mapCanvas = document.getElementById('map');
+	var mapOptions = {
+			center: {lat: 32.079048, lng: 34.774704},
+			zoom: 17,
+			scrollwheel: false
+		};
 
-	//Dialog iframe
-	Site.dialog_iframe = new Caracal.Dialog();
-	Site.dialog_iframe
-		.set_content('<iframe style="width:100%;height:100%;border:0" src="https://secure.ezgo.co.il/Main/OnLineSearchFrame.aspx?iItemId=8901&Lng=en"></iframe>')
-		.set_size('900px', '800px');
+	var map = new google.maps.Map(mapCanvas, mapOptions);
 
-	// async set title for booking dialog
-	language_handler.getTextAsync(null, 'booking_dialog_title', function(constant,data) {
-		Site.dialog_iframe.set_title(data);
-	});
+	new google.maps.Marker({
+			position:{lat: 32.079048, lng: 34.774704},
+			map: map,
+			title: "Reines Hotel"
+		});
 
-	if(Site.is_mobile())
-		Site.dialog_iframe.set_size('300px', '400px');
-
-	//Connect click handler to all button book now to dialog iframe
-	Site.links = document.querySelectorAll('a.book');
-	for (var i=0, count=Site.links.length; i < count; i++)
-		Site.links[i].addEventListener('click', Site.handle_iframe_dialog);
 };
 
 /**
- * Show dialog iframe function
- */
-Site.handle_iframe_dialog = function(event) {
-	event.preventDefault();
-	Site.dialog_iframe.open();
-}
-
-/**
  * Handle clicking on gallery menu item.
+ *
+ * @param object event
  */
 Site.handle_gallery_click = function(event) {
-	// start loading images
 	var gallery_id = event.target.dataset.id;
 	Site.image_loader.load_by_group_id(gallery_id);
 
-	// update gallery menu
 	Site.active_gallery.classList.remove('active');
 	Site.active_gallery = event.target;
 	Site.active_gallery.classList.add('active');
 }
 
-/**
- * Create google map
- */
-Site.map = function (langitude, latitude) {
-  var mapCanvas = document.getElementById('map');
-  var mapOptions = {
-    center: {lat: langitude, lng: latitude},
-    zoom: 17,
-    scrollwheel: false
-  }
-
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-
-  new google.maps.Marker({
-    position:{lat: langitude, lng: latitude},
-    map: map,
-    title: "Reines Hotel"
-  });
-};
-
-// connect document `load` event with handler function
 $(Site.on_load);

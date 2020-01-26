@@ -19,8 +19,16 @@
 		<cms:text constant="features" />
 	</a>
 
+	<!-- WhatsApp button -->
+	<a href="https://api.whatsapp.com/send?phone=972504555275" class="whatsapp">
+		<cms:svg file="site_sprite.svg" symbol="icon-whatsapp"/>
+		<cms:text constant="whatsapp" />
+	</a>
+
 	<!-- book -->
-	<a href="some_place" class="book">
+	<a href="//bookingresults.com/reines5tlv/?lang=eng" class="book">
+		<cms:svg file="site_sprite.svg" symbol="icon-calendar"/>
 		<cms:text constant="book" />
 	</a>
+
 </document>

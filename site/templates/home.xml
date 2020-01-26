@@ -37,41 +37,45 @@
 				<cms:desktop>
 					<!-- Animated keyHole -->
 					<div class="key_hole">
-
-						<!-- Logo -->
-						<a href="#top" class="logo">
-							<cms:svg file="logo.svg"/>
-						</a>
-
-						<!-- Main title -->
+						<a href="#top" class="logo"><cms:svg file="logo.svg"/></a>
 						<h1><cms:text constant="the_perfect_location"/></h1>
 
-						<!-- Book link to outer url -->
-						<a href="SomePlace" class="book">
+						<!-- Go to booking application -->
+						<a href="//bookingresults.com/reines5tlv/?lang=eng" class="book">
 							<cms:text constant="book"/>
 						</a>
 					</div>
 				</cms:desktop>
 
 				<cms:mobile>
-					<!-- Main title -->
 					<h1><cms:text constant="the_perfect_location"/></h1>
 
-					<!-- Book link to outer url -->
-					<a href="SomePlace" class="book">
+					<!-- Go to booking application -->
+					<a href="//bookingresults.com/reines5tlv/?lang=eng" class="book">
 						<cms:text constant="book"/>
 					</a>
 
-					<!-- Logo -->
-					<a href="#top" class="logo">
-						<cms:svg file="logo.svg"/>
-					</a>
+					<a href="#top" class="logo"><cms:svg file="logo.svg"/></a>
 				</cms:mobile>
 			</section>
 
+			<!-- Booking application -->
+			<div id="sbox" data-url="https://bookingresults.com/reines5tlv/actionUrl?lang=eng"/>
+			<link
+				rel="stylesheet"
+				href="https://bookingresults.com/Silverbyte.cdn/searchbox/react/1.6.0.3/searchbox.css"
+				/>
+			<link
+				rel="stylesheet"
+				href="https://bookingresults.com/reines5tlv/Content/new_be/SBoxCustomTheme.css"
+				/>
+			<script
+				type="text/javascript"
+				src="https://bookingresults.com/Silverbyte.cdn/searchbox/react/1.6.0.3/searchbox.js"
+				/>
+
 			<!-- About us -->
 			<section id="about">
-				<!-- About us article -->
 				<cms:module
 					name="articles"
 					action="show"
@@ -82,7 +86,6 @@
 					<param name="title" value=""/>
 				</cms:module>
 
-				<!-- Download link -->
 				<cms:module
 					name="downloads"
 					action="show"
@@ -102,7 +105,6 @@
 
 			<!-- Section gallery -->
 			<section id="gallery">
-				<!-- Menu -->
 				<nav>
 					<cms:module
 						name="gallery"
@@ -141,7 +143,6 @@
 					<div id="map"></div>
 				</cms:desktop>
 
-				<!-- form and links -->
 				<div class="information">
 					<!-- Map link -->
 					<a
@@ -175,7 +176,7 @@
 					<div id="map"></div>
 				</cms:mobile>
 			</footer>
-			<!-- Copyright -->
+
 			<cms:template file="stock/copyright.xml">
 				<param name="holder" value="copyright_holder"/>
 				<param name="text" value="copyright_text"/>
